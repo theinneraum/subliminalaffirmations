@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rich Subliminal Affirmations</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+    #container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 2vw;
+    }
+    #affirmation {
+      font-size: 2.5vw;
+      margin-bottom: 1vh;
+    }
+    #countdown {
+      font-size: 1vw;
+    }
+    #countdown .label {
+      color: orange;
+      margin-right: 0.3vw;
+    }
+    @media (max-width: 768px) {
+      #affirmation {
+        font-size: 4vw;
+      }
+      #countdown {
+        font-size: 2vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="affirmation"></div>
+    <div id="countdown"><span class="label">Next in:</span><span id="timer">30</span> sec</div>
+  </div>
+
+  <script>
+    const affirmations = [
+      "I am already rich in energy and mindset.",
+      "Money flows to me while I sleep.",
+      "Wealth is attracted to me effortlessly.",
+      "I am open to infinite financial blessings.",
+      "I deserve a life of luxury and ease.",
+      "Every breath attracts more prosperity.",
+      "I am a money magnet, even in my dreams.",
+      "My subconscious is wired for wealth.",
+      "I allow massive abundance into my life.",
+      "I am becoming wealthier every night.",
+      "Money loves to be with me.",
+      "I receive money from unexpected sources.",
+      "I feel wealthy, and wealth follows me.",
+      "I have the millionaire mindset.",
+      "I am aligned with limitless riches.",
+      "Financial success is my natural state.",
+      "I rest while money works for me.",
+      "My sleep increases my earning power.",
+      "I am rich in all aspects of life.",
+      "I accept wealth in all forms.",
+      "I am financially free, now and forever.",
+      "Abundance surrounds me constantly.",
+      "I create wealth with ease.",
+      "Luxury is normal for me.",
+      "I attract high-value opportunities.",
+      "My bank balance grows while I rest.",
+      "I am destined to be rich.",
+      "I receive money with joy and gratitude.",
+      "I am worthy of millions.",
+      "My subconscious believes I am rich.",
+      "I am aligned with the energy of wealth.",
+      "Money comes to me from all directions.",
+      "I embody abundance at a cellular level.",
+      "I deserve all the riches life has to offer.",
+      "I am becoming the wealthiest version of me.",
+      "I attract wealth while staying true to myself.",
+      "I love being rich.",
+      "I think like a billionaire.",
+      "I feel safe with massive wealth.",
+      "Wealth is a natural part of my being.",
+      "My income multiplies daily.",
+      "I rest in the comfort of abundance.",
+      "I see riches flowing into my life.",
+      "My wealth is limitless.",
+      "I allow myself to receive more.",
+      "I am successful in all financial ventures.",
+      "The universe supports my financial goals.",
+      "I live in a luxury state of mind.",
+      "I believe in my power to create wealth.",
+      "I let go of scarcity and choose abundance.",
+      "I am calm, confident, and financially empowered.",
+      "My subconscious is creating my rich future.",
+      "I am wealthy by nature.",
+      "The more I sleep, the richer I become.",
+      "I attract wealth while doing what I love.",
+      "I am surrounded by financial miracles.",
+      "I allow big money into my life.",
+      "My energy is luxury.",
+      "I am rich, confident, and unstoppable.",
+      "My dreams are filled with financial freedom.",
+      "I embody the frequency of money.",
+      "I welcome luxury into my life with open arms.",
+      "My subconscious is a money-making machine.",
+      "I am the vibration of abundance.",
+      "I deserve to be rich and happy.",
+      "Wealth is my natural state of being.",
+      "I expect financial miracles.",
+      "I live as the rich person I am becoming.",
+      "I am already rich in my subconscious.",
+      "I allow myself to be wildly wealthy.",
+      "I sleep peacefully knowing money is coming.",
+      "I invest in myself and receive tenfold.",
+      "I radiate wealth in every breath.",
+      "I am confident with large amounts of money.",
+      "I have unlimited earning potential.",
+      "I own my financial destiny.",
+      "I attract luxury with ease.",
+      "I am aligned with the rich version of me.",
+      "Money supports my purpose and passion.",
+      "I deserve the best life has to offer.",
+      "My subconscious is rich-minded.",
+      "I am worthy of passive income and overflow.",
+      "I attract wealthy relationships and partners.",
+      "I live in abundance every moment.",
+      "I am open to next-level prosperity.",
+      "I receive money while staying in flow.",
+      "I rest deeply as riches pour in.",
+      "My beliefs align with ultimate wealth.",
+      "I am grateful for financial overflow.",
+      "I claim my divine right to be rich.",
+      "Money loves how I think and feel.",
+      "I create abundance in my sleep.",
+      "I am a channel for infinite wealth.",
+      "The universe is constantly upgrading my finances.",
+      "I receive more than I spend.",
+      "I attract wealth just by being me.",
+      "I am abundance in human form.",
+      "My financial life gets better every day.",
+      "I rest while my wealth expands.",
+      "I am rich now, and forever."
+    ];
+
+    let index = 0;
+    let timeLeft = 30;
+    const display = document.getElementById("affirmation");
+    const timerDisplay = document.getElementById("timer");
+
+    function updateAffirmation() {
+      display.textContent = affirmations[index];
+      index = (index + 1) % affirmations.length;
+      timeLeft = 30;
+    }
+
+    updateAffirmation();
+    setInterval(() => {
+      timeLeft--;
+      timerDisplay.textContent = timeLeft;
+      if (timeLeft === 0) updateAffirmation();
+    }, 1000);
+  </script>
+</body>
+</html>
